@@ -10,7 +10,10 @@ inoremap <C-a> <C-o>^
 " turn syntax on
 :syntax on
 " emacs style auto tabbing/indenting
+:set autoindent
 :set smartindent
+" Make it so that a curly brace automatically inserts an indented line
+inoremap {<CR> {<CR>}<Esc>O<BS><Tab>
 " highlight all search matches
 :set hlsearch
 " Clear highlighting on escape in normal mode
