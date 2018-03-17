@@ -24,4 +24,6 @@ nnoremap <esc>^[ <esc>^[
 :set tabstop=4
 " make sure shifting with > and < works
 :set sw=4
+" highlight first search result while typing
+:set incsearch
 
