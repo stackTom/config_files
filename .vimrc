@@ -7,6 +7,8 @@ inoremap <C-e> <C-o>$
 inoremap <C-a> <C-o>^
 " enable line numbers
 set number
+" and relative (hybrid) line numbers
+set relativenumber
 " turn syntax on
 syntax on
 " emacs style auto tabbing/indenting
