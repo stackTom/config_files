@@ -32,4 +32,6 @@ set tabstop=4
 set sw=4
 " enable ruler
 set ruler
+" show file name always
+set laststatus=2
 
