@@ -34,4 +34,6 @@ set sw=4
 set ruler
 " show file name always
 set laststatus=2
+" map jj to ESC key
+imap jk <Esc>
 
