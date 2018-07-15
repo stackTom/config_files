@@ -36,4 +36,6 @@ set ruler
 set laststatus=2
 " map jk to ESC key
 imap jk <Esc>
+" case insensitive search
+set ignorecase
 
