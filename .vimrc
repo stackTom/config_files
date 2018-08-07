@@ -38,4 +38,5 @@ set laststatus=2
 imap jk <Esc>
 " case insensitive search
 set ignorecase
+set autoread
 
