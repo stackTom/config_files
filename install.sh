@@ -8,3 +8,7 @@ fi
 cp ./.tmux.conf ~/
 cp ./init.el ~/.emacs.d/
 
+if ! grep -q "set -o vi" ~/.bashrc; then
+    echo "set -o vi" >> ~/.bashrc
+fi
+
