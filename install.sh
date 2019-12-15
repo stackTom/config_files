@@ -14,4 +14,10 @@ cp ./init.el ~/.emacs.d/
 if ! grep -q "set -o vi" ~/.bashrc; then
     echo "set -o vi" >> ~/.bashrc
 fi
+if ! grep -q "export VISUAL=vim" ~/.bashrc; then
+    echo "export VISUAL=vim" >> ~/.bashrc
+fi
+if ! grep -q "export EDITOR=vim" ~/.bashrc; then
+    echo "export EDITOR=vim" >> ~/.bashrc
+fi
 
