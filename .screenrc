@@ -1,5 +1,12 @@
 # ctrl + 1 to ` key
 escape ``
+# make `` work to toggle last window
+escape `e
 # startup message off
 startup_message off
+# bottom status - thanks geohot
+# Window list at the bottom. hostname, centered tabs and redmarked active windows:
+#shelltitle '$ |'
+hardstatus alwayslastline
+hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%? %= %{g}][%{B} %m/%d %{W}%c %{g}]'
 
