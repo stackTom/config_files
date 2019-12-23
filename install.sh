@@ -6,6 +6,7 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
     cp ./.vimrc ~/.xvimrc
 fi
 cp ./.tmux.conf ~/
+cp ./.screenrc ~/
 if [ ! -d ~/.emacs.d/ ]; then
     mkdir ~/.emacs.d/
 fi
