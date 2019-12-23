@@ -1,0 +1,5 @@
+# ctrl + 1 to ` key
+escape ``
+# startup message off
+startup_message off
+
