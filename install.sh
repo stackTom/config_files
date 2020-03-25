@@ -1,5 +1,10 @@
 #!/bin/bash
 
+append_str_if_not_there_to_file () {
+    if ! grep -q "$1" $2; then
+        echo "$1" >> $2
+    fi
+}
 cp ./.vimrc ~/
 # xvimrc for xcode
 if [[ "$OSTYPE" == "darwin"* ]]; then
@@ -12,13 +17,20 @@ if [ ! -d ~/.emacs.d/ ]; then
 fi
 cp ./init.el ~/.emacs.d/
 
-if ! grep -q "set -o vi" ~/.bashrc; then
-    echo "set -o vi" >> ~/.bashrc
+# handle zsh since Mac OS uses it by default
+# TODO: put this in above if which checks for darwin?
+shell=$SHELL
+shell_rc=""
+vi_mode=""
+if [[ "$SHELL" == *"zsh"* ]]; then
+    shell_rc=~/.zshrc
+    vi_mode="bindkey -v"
+elif [[ "$SHELL" == *"bash"* ]]; then
+    shell_rc=~/.bashrc
+    vi_mode="set -o vi"
 fi
-if ! grep -q "export VISUAL=vim" ~/.bashrc; then
-    echo "export VISUAL=vim" >> ~/.bashrc
-fi
-if ! grep -q "export EDITOR=vim" ~/.bashrc; then
-    echo "export EDITOR=vim" >> ~/.bashrc
-fi
+
+append_str_if_not_there_to_file "$vi_mode" $shell_rc
+append_str_if_not_there_to_file "export VISUAL=vim" $shell_rc
+append_str_if_not_there_to_file "export EDITOR=vim" $shell_rc
 
