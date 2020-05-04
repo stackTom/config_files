@@ -39,4 +39,6 @@ imap jk <Esc>
 " case insensitive search
 set ignorecase
 set autoread
+" easier highlight when line are numbers on using mouse
+set mouse=a
 
