@@ -40,5 +40,6 @@ imap jk <Esc>
 set ignorecase
 set autoread
 " easier highlight when line are numbers on using mouse
+set ttymouse=xterm2
 set mouse=a
 
