@@ -42,4 +42,5 @@ set autoread
 " easier highlight when line are numbers on using mouse
 " set ttymouse=xterm2
 " set mouse=a
+au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
 
