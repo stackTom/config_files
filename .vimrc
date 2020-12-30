@@ -42,5 +42,9 @@ set autoread
 " easier highlight when line are numbers on using mouse
 " set ttymouse=xterm2
 " set mouse=a
-au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
+" text over 80 chars is red
+" au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
+" red color column
+set colorcolumn=80
+highlight ColorColumn ctermbg=7 guibg=lightgrey
 
