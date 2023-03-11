@@ -48,3 +48,6 @@ set autoread
 set colorcolumn=80
 highlight ColorColumn ctermbg=7 guibg=lightgrey
 
+" let backspace work in vsvim
+set backspace=indent,eol,start
+
